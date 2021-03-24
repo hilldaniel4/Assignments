@@ -10,6 +10,7 @@ footer {
 }
 nav {
   font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 main {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -22,16 +23,19 @@ h1 {
   text-align: center;
 }
 p {
-  color:beige;
+  color:black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 img {
   width:100%;
+  max-height: 120px;
   background-color: white;
 }
 ol {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:coral;
+  color: black;
+  padding: 10px;
+  list-style-position: inside;
 }
 li {
   font-style:normal;
@@ -48,12 +52,17 @@ th {
 td {
   font-style: italic;
 }
+#UL{
+  list-style-type: none;
+  text-align: center;
+}
 #UL li:nth-child(odd){
   background-color: rgb(60, 212, 250);
 }
 #HTML {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  border: 1px solid black;
+  border-style:solid;
+  border-color:black;
   font-size: 1.5em;
   color: crimson;
   width: 100%;
@@ -87,4 +96,66 @@ text-decoration: none;
 a:active {
 color: blueviolet;
 text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+}
+.topnav {
+  overflow: hidden;
+  background-color: darkslateblue;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color:azure;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color:aquamarine;
+  color: black;
+}
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 30%;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+.column1{
+background-color:burlywood;
+}
+.column2{
+background-color:burlywood;
+}
+.column3{
+background-color:burlywood;
 }
